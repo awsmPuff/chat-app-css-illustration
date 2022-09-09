@@ -1,0 +1,310 @@
+:root {
+    --app-bg: hsl(270, 20%, 96%);
+    --gradient-magenta: hsl(293, 100%, 63%);
+    --gradient-violet: hsl(264, 100%, 61%);
+    --status-color: hsl(276, 100%, 81%);
+    --left-chat: hsl(276, 55%, 52%);
+    --right-chat: hsl(271, 15%, 43%);
+    --placeholder-text: hsl(206, 6%, 79%);
+    --main-heading: hsl(271, 36%, 24%);
+    --paragraph-color: hsl(270, 7%, 64%);
+    --white: hsl(0, 0%, 100%);
+    --submit-btn-bg: hsl(271, 36%, 24%);
+    --radio-btn-outline: hsl(289, 100%, 72%);
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+}
+.bg-1,
+.bg-2 {
+    position: absolute;
+    width: 450px;
+    height: 650px;
+    z-index: -1;
+}
+.bg-1 {
+    top: 0;
+    left: -50px;
+    border-bottom-left-radius: 250px;
+    border-bottom-right-radius: 250px;
+    background-image: linear-gradient(to bottom, var(--gradient-magenta), var(--gradient-violet));
+}
+.bg-2 {
+    bottom: 0;
+    right: -70px;
+    border-top-left-radius: 250px;
+    border-top-right-radius: 250px;
+    background-color: hsla(275, 45%, 76%, 0.1);
+
+}
+/* APP */
+.app-container {
+    width: 250px;
+    height: 540px;
+    border-radius: 30px;
+    margin: 80px 100px auto;
+    background-color: var(--white);
+    padding: 12px;
+    box-shadow: 2px 2px 40px 10px rgba(73, 72, 72, 0.2);
+}
+.contact {
+    position: relative;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 30px 10px 10px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-image: linear-gradient(to right, var(--gradient-violet), var(--gradient-magenta));
+}
+.overlay {
+    position: absolute;
+    z-index: 1;
+    top: -11px;
+    left: 0;
+    right: 0;
+    margin: auto;;
+    width: 150px;
+    height: 25px;
+    border-radius: 10px;
+    background-color: var(--white);
+}
+.left-return {
+    margin-left: 6px;
+    margin-right: 7px;
+}
+.avatar {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.info p {
+    margin: 0 40px 0 10px;
+}
+.info .name {
+    color: var(--white);
+    font-weight: 500;
+    font-size: 15px;
+}
+.info .status {
+    color: var(--status-color);
+    font-size: 12px;
+}
+
+.chat-ui {
+    background-color: var(--app-bg);
+    margin-top: 0;
+    padding: 10px;
+    position: relative;
+}
+.chat-ui p {
+    margin: 0 auto;
+    padding: 7px;
+    border-radius: 12px;
+    font-size: 10px;
+    line-height: 1.2;
+}
+.left-chat, 
+.right-chat {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
+}
+.left-chat p {
+    width: max-content;
+    max-width: 140px;
+    color: var(--left-chat);
+    background-color: hsla(276, 46%, 56%, 0.1);
+    margin-left: 0;
+}
+.left-chat .down {
+    margin-top: 141px;
+}
+
+.right-chat {
+    z-index: 1;
+    right: 10px;
+    position: absolute;
+    top: 104px;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.dog-pics {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+.dog-pics img {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+}
+.right-chat p {
+    width: max-content;
+    max-width: 140px;
+    margin-right: 0;
+    background-color: var(--white);
+}
+
+.pricing {
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(to right, var(--gradient-magenta), var(--gradient-violet));
+    height: 26px;
+    width: 180px;
+    border-radius: 13px;
+    border-bottom-left-radius: 6px;
+    padding: 8px;
+}
+.pricing p {
+    width: 100%;
+    color: var(--white);
+}
+.pricing p span {
+    color: var(--white);
+    margin-left: 35px;
+    font-size: 16px;
+    font-weight: 700;
+}
+.pricing p .to-right {
+    margin-left: 53px;
+}
+.circle {
+    fill: var(--radio-btn-outline);
+}
+/* MESSAGE INPUT */
+.typing-zone {
+    position: relative;
+    background-color: var(--app-bg);
+    padding: 10px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.typing-zone input {
+    width: calc(100% - 30px);
+    height: 28px;
+    border-radius: 50px;
+    padding: 5px 15px;
+    border: none;
+}
+.typing-zone input::placeholder {
+    color: var(--placeholder-text);
+}
+.submit {
+    background-color: var(--submit-btn-bg);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    position: absolute;
+    top: 16.5px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.submit svg {
+    fill: var(--white);
+}
+/* TEXT */
+.app-des {
+    width: 480px;
+    margin-left: 80px;
+    line-height: 2;
+    color: var(--paragraph-color);
+}
+.app-des h1 {
+    font-size: 35px;
+    color: var(--main-heading);
+}
+
+@media (max-width: 430px) {
+    body {
+        flex-direction: column;
+        position: relative;
+    }
+    .bg-1,
+    .bg-2 {
+        width: 400px;
+        height: 480px;
+    }
+    .bg-1 {
+        left: -240px;
+    }
+    .bg-2 {
+        right: -240px;
+        bottom: -140px;
+    }
+    .app-container {
+        width: 240px;
+        height: 500px;
+        margin: 60px auto auto;
+        padding: 10px;
+    }
+    .contact {
+        height: 30px;
+        padding: 28px 8px 8px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    .overlay {
+        position: absolute;
+        z-index: 1;
+        top: -8px;
+        width: 140px;
+        height: 20px;
+    }
+    .info .name {
+        font-size: 14px;
+    }
+    .info .status {
+        font-size: 11px;
+    }
+    .chat-ui {
+        padding: 10px 10px 0 10px;
+    }
+    .chat-ui p {
+        padding: 6px;
+        border-radius: 10px;
+        font-size: 9px;
+    }
+    .typing-zone {
+        padding: 0 auto 8px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    .typing-zone input {
+        height: 26px;
+        margin-top: 0;
+    }
+    .app-des {
+        width: 300px;
+        margin: 50px auto auto;
+        line-height: 2;
+        text-align: center;
+    }
+    .app-des h1 {
+        font-size: 35px;
+        color: var(--main-heading);
+    }
+    .attribution {
+        bottom: -100px;
+    }
+
+}
