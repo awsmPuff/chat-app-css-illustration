@@ -234,7 +234,7 @@ body {
     color: var(--main-heading);
 }
 
-@media (max-width: 430px) {
+@media (max-width: 480px) {
     body {
         flex-direction: column;
         position: relative;
