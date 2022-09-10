@@ -304,7 +304,7 @@ body {
         color: var(--main-heading);
     }
     .attribution {
-        bottom: -100px;
+        bottom: -90px;
     }
 
 }
