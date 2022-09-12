@@ -15,9 +15,11 @@
 body {
     margin: 0;
     padding: 0;
+    height: 100vh;
     font-size: 16px;
     font-family: 'Rubik', sans-serif;
     display: flex;
+    gap: 50px;
     align-items: center;
     justify-content: center;
     background-color: var(--white);
@@ -31,14 +33,14 @@ body {
 }
 .bg-1 {
     top: 0;
-    left: -50px;
+    left: -30px;
     border-bottom-left-radius: 250px;
     border-bottom-right-radius: 250px;
     background-image: linear-gradient(to bottom, var(--gradient-magenta), var(--gradient-violet));
 }
 .bg-2 {
     bottom: 0;
-    right: -70px;
+    right: -50px;
     border-top-left-radius: 250px;
     border-top-right-radius: 250px;
     background-color: hsla(275, 45%, 76%, 0.1);
@@ -49,7 +51,7 @@ body {
     width: 250px;
     height: 540px;
     border-radius: 30px;
-    margin: 80px 100px auto;
+    margin: auto 50px auto 320px;
     background-color: var(--white);
     padding: 12px;
     box-shadow: 2px 2px 40px 10px rgba(73, 72, 72, 0.2);
@@ -225,7 +227,7 @@ body {
 /* TEXT */
 .app-des {
     width: 480px;
-    margin-left: 80px;
+    margin: auto;
     line-height: 2;
     color: var(--paragraph-color);
 }
@@ -238,6 +240,8 @@ body {
     body {
         flex-direction: column;
         position: relative;
+        gap: 0;
+        height: 110vh;
     }
     .bg-1,
     .bg-2 {
@@ -249,12 +253,12 @@ body {
     }
     .bg-2 {
         right: -240px;
-        bottom: -140px;
+        bottom: -400px;
     }
     .app-container {
         width: 240px;
         height: 500px;
-        margin: 60px auto auto;
+        margin: 250px auto 80px;
         padding: 10px;
     }
     .contact {
@@ -295,7 +299,7 @@ body {
     }
     .app-des {
         width: 300px;
-        margin: 50px auto auto;
+        margin: auto;
         line-height: 2;
         text-align: center;
     }
@@ -304,7 +308,7 @@ body {
         color: var(--main-heading);
     }
     .attribution {
-        bottom: -90px;
+        top: 1400px;
     }
 
 }
